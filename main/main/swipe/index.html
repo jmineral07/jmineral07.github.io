@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./js/photoswipe.css">
+    <link rel="stylesheet" href="./js/default-skin/default-skin.css">
+    <script src="./js/photoswipe.min.js"></script>
+    <script src="./js/photoswipe-ui-default.min.js"></script>
+    <title>Document</title>
+    <style>
+        .my-gallery {
+        width: 100%;
+        float: left;
+        }
+        .my-gallery img {
+        width: 100%;
+        height: auto;
+        }
+        .my-gallery figure {
+        display: block;
+        float: left;
+        margin: 0 5px 5px 0; /* 이미지 간격 */
+        width: 170px; /* 썸네일 이미지 넓이지정 */
+        }
+        .my-gallery figcaption {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/starwars.jpeg" itemprop="contentUrl" data-size="1000x1282">
+                <img src="img/starwars.jpeg" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">캡션 1</figcaption>
+        </figure>
+    
+    
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./img/full/2.jpg" itemprop="contentUrl" data-size="1000x1282">
+                <img src="http://placehold.it/320x100" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">캡션 2</figcaption>
+        </figure>
+    
+    
+    
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./img/full/3.jpg" itemprop="contentUrl" data-size="1000x1282">
+                <img src="http://placehold.it/320x100" itemprop="thumbnail" alt="Image description" />
+            </a>
+            <figcaption itemprop="caption description">캡션 3</figcaption>
+        </figure>
+     
+    </div>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="pswp__bg"></div>
+    
+        <div class="pswp__scroll-wrap">
+    
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+    
+    
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+    
+            <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+    
+            <!-- 프리로더 //-->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+    
+                </div> <!-- .pswp__top-bar //-->
+    
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+    
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+    
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+    
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="photoswipe-gallery.js"></script>
+</body>
+</html>
